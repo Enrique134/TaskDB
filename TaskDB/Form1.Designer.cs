@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.lblInfo = new System.Windows.Forms.Label();
+            this.btnProbarConexion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             //
             // lblInfo
@@ -40,11 +41,22 @@
             this.lblInfo.TabIndex = 0;
             this.lblInfo.Text = "Aquí se integrarán los formularios de las Personas 2, 3 y 4.";
             //
+            // btnProbarConexion
+            //
+            this.btnProbarConexion.Location = new System.Drawing.Point(24, 64);
+            this.btnProbarConexion.Name = "btnProbarConexion";
+            this.btnProbarConexion.Size = new System.Drawing.Size(160, 32);
+            this.btnProbarConexion.TabIndex = 1;
+            this.btnProbarConexion.Text = "Probar conexión";
+            this.btnProbarConexion.UseVisualStyleBackColor = true;
+            this.btnProbarConexion.Click += new System.EventHandler(this.btnProbarConexion_Click);
+            //
             // Form1
             //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 220);
+            this.Controls.Add(this.btnProbarConexion);
             this.Controls.Add(this.lblInfo);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -57,5 +69,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.Button btnProbarConexion;
     }
 }

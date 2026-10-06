@@ -12,5 +12,21 @@ namespace TaskDB
         {
             InitializeComponent();
         }
+
+        /// <summary>Prueba la conexión con TaskDB.mdf mediante DatabaseConnection.</summary>
+        private void btnProbarConexion_Click(object sender, EventArgs e)
+        {
+            string error;
+            if (DatabaseConnection.TestConnection(out error))
+            {
+                MessageBox.Show("Conexión exitosa con la base de datos TaskDB.\nArchivo: " + DatabaseConnection.RutaMdf,
+                    "Probar conexión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se pudo conectar con la base de datos TaskDB.\n\n" + error,
+                    "Probar conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
