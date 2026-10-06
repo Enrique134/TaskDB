@@ -33,7 +33,7 @@ namespace TaskDB
                     "TaskDB - Error de base de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            Application.Run(new Form1());
+            Application.Run(new formAgregarTarea());
         }
     }
 }
